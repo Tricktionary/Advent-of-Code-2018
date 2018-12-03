@@ -1,3 +1,5 @@
+require 'set'
+
 def readFile()
   fileName = "./input.txt"
   lines = File.readlines(fileName)
@@ -22,7 +24,7 @@ def detectTwice()
   textArray = readFile()
 
   frequency = 0
-  usedArray = Array.new
+  usedArray = Set[]
   curr = 0
 
   repeat = nil 
@@ -34,7 +36,7 @@ def detectTwice()
         puts repeat
         break
       else
-        usedArray.push(frequency.to_i)
+        usedArray.add(frequency.to_i)
         frequency += text.to_i
       end
     end
