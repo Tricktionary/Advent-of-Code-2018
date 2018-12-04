@@ -53,7 +53,6 @@ def closestString()
         end
       end
       if diff == 1
-        puts "#{input1} == #{input2}"
         puts newString.join
       end
     end
