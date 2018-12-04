@@ -34,5 +34,24 @@ def checkSum()
   puts "#{count2 * count3}"
 end
 
-def closestString
+
+def closestString()
+  inputArray = readFile()
+
+  inputArray.each_with_index do |input1, i|
+    inputArray[i + 1..inputArray.size].each do |input2|
+      dif = 0
+      input1.each_char.with_index.count {|x,k|
+        if x != input2.chars[k]
+          dif += 1 
+        end       
+      }
+      if dif == 1
+        puts x
+      end
+      
+    end
+  end
+end
+
 checkSum()
